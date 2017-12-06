@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+	DevWards
+{% endblock title %}
+
+{% block styles %}
+	{% load static from staticfiles %}
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock styles %}
+
+{% block content %}
+	{{ block.super }}
+	Hola este es el home.html
+{% endblock content %}
