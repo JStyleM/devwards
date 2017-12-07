@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<section class="background-gray">
+		<div class="container--600">
+			<div class="site__register row column">
+				<h1>Registro</h1>
+				<div class="site__register__button row middle between">
+					<a class="site__register__button-fb" href="">
+						Registro con Facebook
+					</a>
+					<a class="site__register__button-tw" href="">
+						Registro con Twitter
+					</a>
+				</div>
+				<p><i>o create una cuenta con tu e-mail y username</i></p>
+				<form class="site__form background-white">
+					<div class="site__form__input">
+						<input type="text" placeholder="Username">
+						<input type="text" placeholder="E-mail">
+						<input type="text" placeholder="Contraseña">
+						<input type="text" placeholder="Confirmar contraseña">
+						<input type="submit" value="Enviar">
+					</div>
+				</form>
+				<p class="site__register__link">¿Ya eres miembro? <a href="">Ingresar ahora</a></p>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="background-white">
+			<span class="footer-icon icon-twitter"></span>
+			<span class="footer-icon icon-facebook"></span>
+			<span class="footer-icon footer-icon--heart icon-heart"></span>
+			<span class="footer-icon icon-google-plus"></span>
+			<span class="footer-icon icon-vimeo"></span>
+		</div>
+	</footer>
+{% endblock content %}
