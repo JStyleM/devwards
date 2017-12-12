@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-	<title>Devwards</title>
-	<link rel="stylesheet" href="public/css/fonts.css">
-	<link rel="stylesheet" href="public/css/main.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-</head>
-<body>
+{% extends "base.html" %}
+{% load static from staticfiles %}
 	<!--<header class="head">
 		<div class="background-white">
 			<div class="container">
@@ -48,6 +37,7 @@
 			</div>
 		</div>
 	</header>-->
+{% block header %}
 	<header class="head-login">
 		<div class="background-gray border__bottom-gray shadow__menu">
 			<div class="container">
@@ -55,7 +45,7 @@
 					<span class="head__two__item--logo">devwards</span>
 					<ul class="row middle">
 						<li class="head__two__item">
-							<a class="head__two__item-a" href="">home</a>
+							<a class="head__two__item-a" href="{% url 'main:home' %}">home</a>
 						</li>
 						<li class="head__two__item">
 							<a class="head__two__item-a" href="">nosotros</a>
@@ -68,6 +58,8 @@
 			</div>
 		</div>
 	</header>
+{% endblock header %}
+{% block content %}
 	<section class="background-gray">
 		<div class="container--1000">
 			<article class="site__detail--main row middle between">
@@ -106,15 +98,15 @@
 				</div>
 			</article>
 			<article class="site__detail--images">
-				<img class="site__detail--images__figure" src="public/img/site1.jpg" alt="">
-				<img class="site__detail--images__figure" src="public/img/site1.jpg" alt="">
-				<img class="site__detail--images__figure" src="public/img/site1.jpg" alt="">
+				<img class="site__detail--images__figure" src="{% static 'img/site1.jpg' %}" alt="">
+				<img class="site__detail--images__figure" src="{% static 'img/site1.jpg' %}" alt="">
+				<img class="site__detail--images__figure" src="{% static 'img/site1.jpg' %}" alt="">
 			</article>
 			<article class="site__detail--authors row middle between">
 				<div class="site__detail--author row column">
 					<div class="row middle">
 						<figure class="site__detail--author__figure">
-							<img src="public/img/persona1.jpg" alt="">
+							<img src="{% static 'img/persona1.jpg' %}" alt="">
 						</figure>
 						<div class="site__detail--author__name row column">
 							<h4>Juan Jose Pino</h4>
@@ -126,7 +118,7 @@
 				<div class="site__detail--author row column">
 					<div class="row middle">
 						<figure class="site__detail--author__figure">
-							<img src="public/img/persona1.jpg" alt="">
+							<img src="{% static 'img/persona1.jpg' %}" alt="">
 						</figure>
 						<div class="site__detail--author__name row column">
 							<h4>Juan Jose Pino</h4>
@@ -138,7 +130,7 @@
 				<div class="site__detail--author row column">
 					<div class="row middle">
 						<figure class="site__detail--author__figure">
-							<img src="public/img/persona1.jpg" alt="">
+							<img src="{% static 'img/persona1.jpg' %}" alt="">
 						</figure>
 						<div class="site__detail--author__name row column">
 							<h4>Juan Jose Pino</h4>
@@ -159,8 +151,8 @@
 			<span class="footer-icon icon-vimeo"></span>
 		</div>
 	</footer>
-	<script src="public/js/vendor/jquery.js"></script>
-	<script src="public/js/vendor/chart.js"></script>
+{% endblock content %}
+{% block scripts %}
 	<script>
 		var data1 = [
 			{
@@ -232,5 +224,4 @@
 		var ctx4 = document.getElementById("myChart4").getContext("2d");
 		myNewChart4 = new Chart(ct4).Doughnut(data4, options);
 	</script>
-</body>
-</html>
+{% endblock scripts %}

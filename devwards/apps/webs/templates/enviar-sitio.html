@@ -1,53 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block content %}
 
-	<title>Devwards</title>
-	<link rel="stylesheet" href="public/css/fonts.css">
-	<link rel="stylesheet" href="public/css/main.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-</head>
-<body>
-	<header class="head">
-		<div class="background-white">
-			<div class="container">
-				<div class="head__one  row between middle">
-					<span class="head__one__item">
-						Los premios para el diseño, la creatividad y la innovación en Internet
-					</span>
-					<ul class="row middle">
-						<li class="head__one__item">
-							<a class="head__one__item-a">¿Eres miembro?</a>
-						</li>
-						<li class="head__one__item ">
-							<a class="head__one__item-a head__one__item-a--bold" href="">Registrar / Iniciar sesión</a>
-						</li>
-					</ul>
-				</div>	
-			</div>
-		</div>
-		<div class="background-gray border__bottom-gray shadow__menu">
-			<div class="container">
-				<div class="head__two row between middle">
-					<span class="head__two__item--logo">devwards</span>
-					<ul class="row middle">
-						<li class="head__two__item">
-							<a class="head__two__item-a" href="">home</a>
-						</li>
-						<li class="head__two__item">
-							<a class="head__two__item-a" href="">nosotros</a>
-						</li>
-						<li class="head__two__item">
-							<a class="head__two__item-a head__two__item-a--button" href="">enviar tu sitio</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</header>
 	<section class="background-gray">
 		<div class="container--800">
 			<div class="site__register row column">
@@ -148,7 +102,11 @@
 			<span class="footer-icon icon-vimeo"></span>
 		</div>
 	</footer>
-	<script src="public/js/vendor/jquery.js"></script>
+
+{% endblock content %}
+
+{% block scripts %}
+	
 	<script>
 		var count = 0;
 		$(document).ready( function(){
@@ -186,5 +144,4 @@
 			});
 		});
 	</script>
-</body>
-</html>
+{% endblock scripts %}

@@ -14,11 +14,14 @@
 						Login con Twitter
 					</a>
 				</div>
-				<p><i>o ingresa con tu email y contraseña</i></p>
-				<form class="site__form background-white">
+				<p><i>o ingresa con tu Usuario y contraseña</i></p>
+				<form class="site__form background-white" method="POST">
+					{% csrf_token %}
 					<div class="site__form__input">
-						<input type="text" placeholder="E-mail">
-						<input type="text" placeholder="Contraseña">
+						{{ form.username }}
+						{{ form.username.errors }}
+						{{ form.password }}
+						{{ form.password.errors }}
 						<input type="submit" value="Enviar">
 					</div>
 				</form>
