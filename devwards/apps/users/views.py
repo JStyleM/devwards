@@ -8,7 +8,7 @@ from django.contrib.auth import login, authenticate, logout
 
 class LogoutView(View):
 
-	def get(self, request, *args, **kwargs):	
+	def get(self, request, *args, **kwargs):
 		logout(request)
 		return redirect(reverse('main:home'))
 
